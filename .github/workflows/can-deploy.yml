@@ -5,7 +5,7 @@ on: [pull_request]
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
 jobs:
-  test-deploy:
+  can-i-deploy:
     name: Test deployment
     runs-on: ubuntu-latest
     permissions: 
