@@ -27,6 +27,7 @@ tags: [greetings]
 ---
 
 Congratulations, you have made your first post!
+Now i changed it!
 
 Feel free to play around and edit this post as much you like.
 ```
