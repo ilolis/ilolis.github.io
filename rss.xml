@@ -44,7 +44,9 @@
             <guid>https://your-docusaurus-test-site.com/my-blog/first-blog-post</guid>
             <pubDate>Tue, 28 May 2019 00:00:00 GMT</pubDate>
             <description><![CDATA[Hello, and welcome to my blog post!]]></description>
-            <content:encoded><![CDATA[<p>Hello, and welcome to my blog post!</p><p>Thank you for being here, I highly appreaciate that!</p>]]></content:encoded>
+            <content:encoded><![CDATA[<p>Hello, and welcome to my blog post!
+changed it!
+Thank you for being here, I highly appreaciate that!</p>]]></content:encoded>
             <category>hola</category>
             <category>docusaurus</category>
         </item>
