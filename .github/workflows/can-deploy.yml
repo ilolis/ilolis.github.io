@@ -8,6 +8,8 @@ jobs:
   test-deploy:
     name: Test deployment
     runs-on: ubuntu-latest
+    permissions: 
+      pull-requests: write
     steps:
       # - uses: actions/checkout@v3
       # - uses: actions/setup-node@v3
@@ -22,8 +24,7 @@ jobs:
       #   run: npm run build
 
       - name: Comment PR
-        permissions: 
-          pull-requests: write
+
         uses: thollander/actions-comment-pull-request@v2
         with:
           message: |
