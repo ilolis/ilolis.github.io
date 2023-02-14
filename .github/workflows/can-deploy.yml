@@ -17,5 +17,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-      - name: Test build website
+
+      - name: Build the site
         run: npm run build
+
+      - uses: mshick/add-pr-comment@v2
+        with:
+          message: |
+            🥳🥳 Ready to merge 🥳🥳
