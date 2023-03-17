@@ -6,10 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Personal Blog - Ilias Lolis',
-  tagline: '',
+  title: "Ilias Lolis' Blog",
   favicon: 'img/favicon.png',
-
   // Set the production url of your site here
   url: 'https://ilolis.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -42,6 +40,9 @@ const config = {
         blog: {
           routeBasePath: '/', // Serve the blog at the site's root
           showReadingTime: true,
+          blogTitle: 'Blog title',
+          blogDescription: 'Blog',
+          
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -92,23 +93,23 @@ const config = {
           //     },
           //   ],
           // },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
+          // {
+          //   title: 'Community',
+          //   items: [
+          //     {
+          //       label: 'Stack Overflow',
+          //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+          //     },
+          //     {
+          //       label: 'Discord',
+          //       href: 'https://discordapp.com/invite/docusaurus',
+          //     },
+          //     {
+          //       label: 'Twitter',
+          //       href: 'https://twitter.com/docusaurus',
+          //     },
+          //   ],
+          // },
           // {
           //   title: 'More',
           //   items: [
