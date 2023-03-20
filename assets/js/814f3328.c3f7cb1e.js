@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_blog=self.webpackChunkmy_blog||[]).push([[535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Redis Durability","permalink":"/redis-durability"},{"title":"Welcome To My Blog!","permalink":"/welcome-to-my-blog"}]}')}}]);
