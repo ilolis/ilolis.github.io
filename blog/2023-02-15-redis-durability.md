@@ -12,7 +12,7 @@ tags: [hola, welcome]
 Redis is a high-performance, distributed, in-memory data store that can be used as a database, cache or message broker. It is an open-source, NoSQL database that is designed to deliver high performance and low latency access to data. The core difference between Redis and a traditional database such as Postgres, MySQL and DynamoDB is that Redis stores data in memory and not in disk, a *feature* that gives Redis ultra fast response times.
 
 However, the approach of storing data in-memory can be prone to data loss in the event of a system crash or power failure. In contrast, storing data persistently on disk provides durability, but at the cost of slower access times due to disk I/O. In this article, we will discuss methods for configuring Redis to be more resilient, as an out-of-the-box configuration of Redis could result in complete data loss if your Redis instance crashes.
-
+<!--truncate-->
 There exist several methods to safeguard against a data loss. However, it is commonly misunderstood that enabling replication in Redis suffices to solve this problem. Yet, this notion does not always hold true. Prior to exploring the various options available for ensuring the durability of Redis as a database, let's first examine how Redis replication works.
 
 ### Redis Replication
