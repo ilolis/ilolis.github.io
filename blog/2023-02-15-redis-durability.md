@@ -2,7 +2,7 @@
 slug: redis-durability
 title: Redis Durability
 authors: ilolis
-tags: [hola, welcome]
+tags: [durability, microservices, redis, replication]
 ---
 
 # Redis durability
