@@ -58,8 +58,6 @@ MemoryDB achieves durability by enabling the AOF feature we discussed earlier. T
 
 The bad case about MemoryDB is that it is very expensive. At the time of writing, the price of `db.r6g.large` with on-demand pricing for the Ireland region costs $0.344/hour which totals to about $260/month. The same instance in ElastiCache costs only about $170/month, which is significantly cheaper. Moreover, MemoryDB changes $0.20 for each GB of data you write to your Redis, which isn't significant, but if your application is write-heavy, then this cost will add up quickly.
 
-I guess, durability comes at a cost. 
-
 
 ## Conclusion
 In conclusion, Redis is a powerful and flexible in-memory data store that can be used for a wide range of use cases such as caching, message queues, and databases. However, the in-memory approach that Redis uses for storage can be prone to data loss in the event of a system failure or power outage. This means that keys and [stream items](https://redis.io/docs/data-types/streams-tutorial/) might be lost if your master experiences a failure! To mitigate these risks, Redis provides several options for making data more durable, including replication and persistence. Replication provides a mechanism for failover and high availability, but it comes with the risk of lost data if all of your nodes fail simultaneously. On the other hand, persistence options such as RDB and AOF provide more durable storage by saving data to disk. The choice between these options will depend on the specific needs and requirements of your application.
