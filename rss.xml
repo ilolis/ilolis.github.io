@@ -13,8 +13,8 @@
             <link>https://ilolis.github.io/welcome-to-my-blog</link>
             <guid>https://ilolis.github.io/welcome-to-my-blog</guid>
             <pubDate>Wed, 15 Feb 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[Welcome to my blog! 🧡]]></description>
-            <content:encoded><![CDATA[<p>Welcome to my blog! 🧡</p><p>If you're passionate about software engineering and microservices, you're in the right place! I've always been fascinated by the potential of microservices architecture and its impact on building scalable and resilient applications!</p><p>In this blog, I will be sharing my knowledge, experience, and insights on various topics related to software engineering. I'll cover a range of topics, including best practices for designing and implementing microservices, tools and technologies for your development process, things to watch out and the latest trends (and not) in the software engineering industry. Also, I might write a few things about embedded stuff. 😊</p><p>So, whether you're looking to improve your skills as a software engineer, or you're simply interested in learning more about microservices, I invite you to keep an eye on my blog! </p><p>I hope that you'll find something useful and interesting here.</p><p>See you!</p>]]></content:encoded>
+            <description><![CDATA[Welcome to my blog.]]></description>
+            <content:encoded><![CDATA[<p>Welcome to my blog.</p><p>In this blog, I will be sharing my knowledge, experience, and insights on various topics related to backend software engineering. I'll cover a range of topics, including best practices for designing and implementing microservices, tools and technologies for your development process, things to watch out and the latest trends (and not) in the industry. </p><p>Also, I might write a few things about embedded software engineering.</p><p>I hope that you'll find something useful and interesting here 😊</p>]]></content:encoded>
             <category>hola</category>
             <category>welcome</category>
         </item>
