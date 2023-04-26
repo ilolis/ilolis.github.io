@@ -30,7 +30,7 @@ The catch in the above strategy is the fact that the replication of the data bet
 #### Option 1: Use `WAIT N T` 
 The `WAIT N T` command instructs the master to replicate the write request to at least `N` replicas and for a maximum of `T` milliseconds before acknowledging the write request to the client. 
 
-In this scenario, if `N` equals to the number of replicas, then the write operation will only be considered complete when all replicas have received the write and acknowledge it. This approach ensures that all replicas get the write command and in case of a failover all of the replicas will be in-sync with the master, so that no-data will be lost.
+In this scenario, if `N` equals to the number of replicas, then the write operation will only be considered complete when all replicas have received the write and acknowledged it. This approach ensures that all replicas get the write command and in case of a failover all of the replicas will be in-sync with the master, so that no-data will be lost.
 
 If the N parameter in the `WAIT` command is set to a value less than the total number of replicas, then the write operation will only be applied to `N` replicas, and not all replicas in the system will have the latest write. If a replica that did not receive the latest write is promoted to a master during a failover the latest write will be lost. Therefore, it's important to set the `N` parameter to a value that is equal to the number of replicas to ensure that all replicas receive the latest write and to prevent data loss.
 
