@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://ilolis.github.io/</id>
+    <id>https://blog.lolis.gr/</id>
     <title>Ilias Lolis' Blog Blog</title>
     <updated>2023-02-15T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://ilolis.github.io/"/>
+    <link rel="alternate" href="https://blog.lolis.gr/"/>
     <subtitle>Ilias Lolis' Blog Blog</subtitle>
-    <icon>https://ilolis.github.io/img/favicon.png</icon>
+    <icon>https://blog.lolis.gr/img/favicon.png</icon>
     <entry>
         <title type="html"><![CDATA[Welcome To My Blog]]></title>
-        <id>https://ilolis.github.io/welcome-to-my-blog</id>
-        <link href="https://ilolis.github.io/welcome-to-my-blog"/>
+        <id>https://blog.lolis.gr/welcome-to-my-blog</id>
+        <link href="https://blog.lolis.gr/welcome-to-my-blog"/>
         <updated>2023-02-15T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Welcome to my blog.]]></summary>
         <content type="html"><![CDATA[<p>Welcome to my blog.</p><p>In this blog, I will be sharing my knowledge, experience, and insights on various topics related to backend software engineering. I'll cover a range of topics, including best practices for designing and implementing microservices, tools and technologies for your development process, things to watch out and the latest trends (and not) in the industry. </p><p>Also, I might write a few things about embedded software engineering.</p><p>I hope that you'll find something useful and interesting here 😊</p>]]></content>

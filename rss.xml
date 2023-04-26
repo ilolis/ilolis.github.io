@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Ilias Lolis' Blog Blog</title>
-        <link>https://ilolis.github.io/</link>
+        <link>https://blog.lolis.gr/</link>
         <description>Ilias Lolis' Blog Blog</description>
         <lastBuildDate>Wed, 15 Feb 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,8 +10,8 @@
         <language>en</language>
         <item>
             <title><![CDATA[Welcome To My Blog]]></title>
-            <link>https://ilolis.github.io/welcome-to-my-blog</link>
-            <guid>https://ilolis.github.io/welcome-to-my-blog</guid>
+            <link>https://blog.lolis.gr/welcome-to-my-blog</link>
+            <guid>https://blog.lolis.gr/welcome-to-my-blog</guid>
             <pubDate>Wed, 15 Feb 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Welcome to my blog.]]></description>
             <content:encoded><![CDATA[<p>Welcome to my blog.</p><p>In this blog, I will be sharing my knowledge, experience, and insights on various topics related to backend software engineering. I'll cover a range of topics, including best practices for designing and implementing microservices, tools and technologies for your development process, things to watch out and the latest trends (and not) in the industry. </p><p>Also, I might write a few things about embedded software engineering.</p><p>I hope that you'll find something useful and interesting here 😊</p>]]></content:encoded>
