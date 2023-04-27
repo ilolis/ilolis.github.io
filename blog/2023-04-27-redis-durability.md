@@ -60,6 +60,6 @@ The bad case about MemoryDB is that it is very expensive. At the time of writing
 
 
 ## Conclusion
-In conclusion, Redis is a powerful and flexible in-memory data store that can be used for a wide range of use cases such as caching and message queues. However, the in-memory approach that Redis uses for storage can be prone to data loss in the event of a system failure or power outage. **This means that keys and [stream items](https://redis.io/docs/data-types/streams-tutorial/) might be lost if your master experiences a failure! Don't choose Redis if you can't afford to loose data!** 
+In conclusion, Redis is a powerful and flexible in-memory data store that can be used for a wide range of use cases such as caching and message queuing. However, the in-memory approach that Redis uses for storage can be prone to data loss in the event of a system failure or power outage. **This means that keys and [stream items](https://redis.io/docs/data-types/streams-tutorial/) might be lost if your master experiences a failure! Don't choose Redis if you can't afford to loose any data!** 
 
 To mitigate the above problem, Redis provides replication and persistence. Replication provides a mechanism for failover and high availability, but it comes with the risk of lost data if all of your nodes fail simultaneously. On the other hand, persistence options such as RDB and AOF provide more durable storage by saving data to disk. The choice between these options will depend on the specific needs and requirements of your application.
