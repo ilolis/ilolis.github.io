@@ -17,9 +17,9 @@ There exist several methods to safeguard against a data loss. However, it is com
 
 ### Redis Replication
 
-Redis provides a replication mechanism that allows it to withstand a node failure increasing the availability and the throughput of the system. The default replication strategy of Redis is based on a master-replica model, where one Redis instance acts as the master and one or more Redis instances act as replicas. The master continuously sends commands and data to its replicas, which replicate the master's data in near real-time. When a write operation occurs on the master, the operation is first written to the master's in-memory database, and then transmitted **asynchronously** to all the connected replicas. The replicas then execute the same operation in their own databases, which allows them to maintain a copy of the master's data and being in-sync. 
+Redis provides a replication mechanism that allows it to withstand a node failure increasing the availability and the throughput of the system. The default replication strategy of Redis is based on a master-replica model, where one Redis instance acts as the master and one or more Redis instances act as replicas. The master continuously sends commands and data to its replicas, which replicate the master's data in near real-time. When a write operation occurs on the master, the operation is first written to the master's in-memory database, acknowledged to the client and then transmitted **asynchronously** to all the connected replicas. The replicas then execute the same operation in their own databases, which allows them to maintain a copy of the master's data and being in-sync. 
 
-In case of a master node failure, Redis supports automatic failover, where a replica can be promoted to a master. Redis achieves this by monitoring the health of nodes and by initiating a failover if necessary. When Redis detects that the master is down, it selects one replica to promote to master and reconfigures the other replicas to replicate from the new master. This process is designed to be automatic and fast, allowing for minimal downtime in the event of a master failure.
+In case of a master node failure, Redis supports automatic failover, where a replica can be promoted to a master. Redis achieves this by monitoring the health of the master and by initiating a failover if necessary. When Redis detects that the master is down, it selects one replica to promote to master and reconfigures the other replicas to replicate from the new master. This process is designed to be automatic and fast, allowing for minimal downtime in the event of a master failure.
 
 
 #### The catch
@@ -36,7 +36,7 @@ If the N parameter in the `WAIT` command is set to a value less than the total n
 
 
 
-However, it's important to note that this approach comes with significant performance  trade-off. Waiting for all your replicas to acknowledge a write operation can result in increased latency and reduced throughput, especially when your application is read-heavy requiring many replicas. 
+However, it's important to note that this approach comes with a significant performance  trade-off. Waiting for all your replicas to acknowledge a write operation can result in increased latency and reduced throughput, especially when your application is read-heavy requiring many replicas. 
 
 #### Option 2: Make Redis a persistence database
 Since Redis stores all of your data in-memory, you should be aware that in the above solution, if the master and all of the replicas fail due to hardware issues, you will lose your data permanently. To make your Redis durable, you can configure Redis to dump your data to durable storage such as an SSD or an HDD. 
@@ -60,4 +60,6 @@ The bad case about MemoryDB is that it is very expensive. At the time of writing
 
 
 ## Conclusion
-In conclusion, Redis is a powerful and flexible in-memory data store that can be used for a wide range of use cases such as caching, message queues, and databases. However, the in-memory approach that Redis uses for storage can be prone to data loss in the event of a system failure or power outage. This means that keys and [stream items](https://redis.io/docs/data-types/streams-tutorial/) might be lost if your master experiences a failure! To mitigate these risks, Redis provides several options for making data more durable, including replication and persistence. Replication provides a mechanism for failover and high availability, but it comes with the risk of lost data if all of your nodes fail simultaneously. On the other hand, persistence options such as RDB and AOF provide more durable storage by saving data to disk. The choice between these options will depend on the specific needs and requirements of your application.
+In conclusion, Redis is a powerful and flexible in-memory data store that can be used for a wide range of use cases such as caching and message queues. However, the in-memory approach that Redis uses for storage can be prone to data loss in the event of a system failure or power outage. **This means that keys and [stream items](https://redis.io/docs/data-types/streams-tutorial/) might be lost if your master experiences a failure! Don't choose Redis if you can't afford to loose data!** 
+
+To mitigate the above problem, Redis provides replication and persistence. Replication provides a mechanism for failover and high availability, but it comes with the risk of lost data if all of your nodes fail simultaneously. On the other hand, persistence options such as RDB and AOF provide more durable storage by saving data to disk. The choice between these options will depend on the specific needs and requirements of your application.
